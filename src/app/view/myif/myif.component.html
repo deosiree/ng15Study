@@ -1,0 +1,11 @@
+<p>myif works!</p>
+
+<button (click)="state = !state">切换</button>
+
+<mark *appMyif="state">
+  <h1>我其实相当于ng-template组件</h1>
+</mark>
+
+<ng-template [appMyif]="state">
+  <h1>我就是template</h1>
+</ng-template>
