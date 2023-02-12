@@ -1,0 +1,8 @@
+.nav-item {
+  color: #000;
+  text-decoration: none;
+  margin: 2px 8px;
+}
+.active {
+  color: red;
+}
