@@ -1,3 +1,11 @@
+# ng15Study
+
+Angular15框架的学习
+
+学自宋宇的B站视频https://www.bilibili.com/video/BV1s3411D71T?p=10&vd_source=ca7495c5361bd1ef258acbc7b862c64d
+
+
+
 # Demo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
