@@ -1,0 +1,35 @@
+<h1 [ngClass]="{red:flagClass, bgblue:flagClass}">
+  {{title}}
+</h1>
+
+<!-- 共享同个值 -->
+<h1 [ngClass]="{'red bgblue':flagClass}">
+  {{title}}
+</h1>
+
+<!-- 数组表达式 -->
+<h1 [ngClass]="flagClass ? ['red','f60','bgblue']:[]">
+  {{title}}
+</h1>
+<!-- 可以换成逻辑表达式 -->
+<h1 [ngClass]="count%3==0 ? ['red','f60','bgblue']:(count%3==1 ? ['red', 'f60']:[])">
+  {{title}}
+</h1>
+
+<button (click)="onclick_class()">切换</button>
+
+<hr>
+<hr>
+<hr>
+<hr>
+
+<h1 [ngStyle]="{color:flagStyle?'red':'blue'}">
+  {{title}}
+</h1>
+
+<!-- 针对对象 -->
+<h1 [ngStyle]="objectStyle">
+  {{title}}
+</h1>
+
+<button (click)="onclick_style()">切换</button>

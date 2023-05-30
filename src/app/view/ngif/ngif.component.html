@@ -1,0 +1,6 @@
+<h1>ngif</h1>
+<h2 *ngIf="flag">是真的</h2>
+
+<h2 *ngIf="!flag;else thenDom">is true</h2>
+<!-- else的指令就是ng-template，具名用#设置 -->
+<ng-template #thenDom>is false</ng-template>

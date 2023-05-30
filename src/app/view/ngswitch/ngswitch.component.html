@@ -1,0 +1,11 @@
+<button (click)="value = '1'">小红</button>
+<button (click)="value = '2'">小明</button>
+<button (click)="value = '3'">小刚</button>
+<button (click)="value = '4'">老王</button>
+
+<div [ngSwitch]="value">
+  <div *ngSwitchCase="'1'">我喜欢小红</div>
+  <div *ngSwitchCase="'2'">我喜欢小明</div>
+  <div *ngSwitchCase="'3'">我喜欢小刚</div>
+  <div *ngSwitchDefault>我喜欢老王</div>
+</div>

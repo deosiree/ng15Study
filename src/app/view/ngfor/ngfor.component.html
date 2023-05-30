@@ -1,0 +1,27 @@
+<!-- 最基础的使用 -->
+<ul>
+  <li *ngFor="let num of nums">数字是{{num}}</li>
+</ul>
+
+<!-- 序号是index，可以用as给变量赋别名 -->
+<ul>
+  <li *ngFor="let num of nums; index as id">({{id+1}}){{num}}</li>
+</ul>
+
+<!-- 在业务中常用的 全套遍历 
+  index:索引号
+  count:可迭代长度
+  first:是否为首条
+  last:是否为尾条
+  even:是否为偶数
+  odd:是否为奇数
+-->
+<ul>
+  <li *ngFor="let item of list;index as index;count as count;first as first;last as last;even as even;odd as odd">
+    <p [ngStyle]="{backgroundColor:odd?'red':'green',color:even?'red':'green'}">
+      <span>({{index}}){{item.name}}&nbsp;</span>
+      <span *ngIf="first">可迭代长度:{{count}}&nbsp;</span>
+      <span *ngIf="last">over&nbsp;</span>
+    </p>
+  </li>
+</ul>
