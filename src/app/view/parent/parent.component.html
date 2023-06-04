@@ -1,0 +1,22 @@
+<div>
+<!-- 父传子 -->
+<p>
+  父组件双向数据绑定了的属性：
+  <input type="text" [(ngModel)]="parentValue">
+</p>
+<!-- <p>
+  使用子组件：
+  <app-child [value]="parentValue"></app-child>
+</p> -->
+
+<hr>
+
+<!-- 子传父 -->
+<!-- 父组件给予子组件一个自定义事件 -->
+<p>
+  使用子组件：
+  <app-child [value]="parentValue" (setValue)="getSon($event)"></app-child>
+</p>
+
+</div>
+

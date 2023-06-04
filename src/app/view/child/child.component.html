@@ -1,0 +1,18 @@
+<!-- 父传子 -->
+<!-- 1.使用@Input装饰器来接收父组件的属性 -->
+<!-- <h2>{{value}}</h2> -->
+
+<!-- 2.使用别名来避免冲突 -->
+<h2>{{myValue}}</h2>
+
+<!-- 3.修改子组件不会污染父组件的值 -->
+<div>
+  修改子组件不会污染父组件的值
+  <input type="text" [(ngModel)]="myValue">
+</div>
+
+<hr>
+
+<!-- 子传父  -->
+<mark>子传父的input</mark>
+<input type="text" (input)="sentValue($event)">
