@@ -1,0 +1,14 @@
+<p>plan works! 执行中的计划，共{{data.length}}条</p>
+
+<ul>
+  <li *ngFor="let item of data;index as i">
+    <!-- 编辑状态：根据数据的一个值，来判定显示 -->
+    <div (click)="onSetEdit(item)" class="flex" [ngStyle]="{display: item.edit ? 'none': 'flex'}">
+      <p> {{i+1}}、</p>
+      <p> {{item.value}}</p>
+      <button (click)="onDel(item,$event)">删</button>
+    </div>
+
+    <input [(ngModel)]="item.value" [ngStyle]="{display:item.edit?'flex':'none'}" type="text" value="{{item.value}}" (keyup)="onEnter(item,$event)">
+  </li>
+</ul>

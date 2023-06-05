@@ -10,6 +10,12 @@ import { AttrsComponent } from './view/attrs/attrs.component';
 import { FormsModule } from '@angular/forms';
 import { MasterComponent } from './view/master/master.component';
 import { ChildrenComponent } from './view/children/children.component';
+import { WatchvalueComponent } from './view/watchvalue/watchvalue.component';
+import { WatchvalueChildComponent } from './view/watchvalue-child/watchvalue-child.component';
+import { PlanComponent } from './todolist/plan/plan.component';
+import { DoneComponent } from './todolist/done/done.component';
+import { HeaderComponent } from './todolist/header/header.component';
+import { IndexComponent } from './todolist/index/index.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +26,12 @@ import { ChildrenComponent } from './view/children/children.component';
     AttrsComponent,
     MasterComponent,
     ChildrenComponent,
+    WatchvalueComponent,
+    WatchvalueChildComponent,
+    PlanComponent,
+    DoneComponent,
+    HeaderComponent,
+    IndexComponent,
   ],
   imports: [
     BrowserModule,

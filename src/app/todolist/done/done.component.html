@@ -1,0 +1,12 @@
+<p>done works! 已完成的计划，共{{data.length}}条</p>
+
+<ul>
+  <li *ngFor="let item of data;index as i">
+    <!-- 编辑状态：根据数据的一个值，来判定显示 -->
+    <div class="flex">
+      <p> {{i+1}}、</p>
+      <p> {{item.value}}</p>
+      <button (click)="onDel(item,$event)">删</button>
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,12 @@
+/*局部变量(header标签以内皆为局部作用域)*/
+header{
+  --blue:blue;
+}
+
+.input{
+  text-align: center;
+  color: var(--blue);//借用了局部样式
+}
+.input::placeholder{
+  color: var(--red);//借用了全局样式src/style.scss
+}

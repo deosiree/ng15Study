@@ -1,0 +1,25 @@
+<h1>TODOLIST Angular</h1>
+
+<app-header (onChangeItem)="onChangeItem($event)"></app-header>
+
+<app-plan [data]="plans" (onChangeItem)="onChangeItem($event)"></app-plan>
+
+<app-done [data]="dones" (onDelItem)="onChangeItem($event)"></app-done>
+
+<footer>
+  <button (click)="clearAll()">清空所有</button>
+</footer>
+
+
+<!--
+  父传子-》data：
+  [data]="plans"
+  [data]="dones"
+  把两个数组都以data为名传给两个子组件
+
+  子传父-》onChangeItem,onDelItem：
+  (onChangeItem)="onChangeItem($event)"
+  (onChangeItem)="onChangeItem($event)"
+  (onDelItem)="onChangeItem($event)"
+  子修改值后，父就会收到值修改的事件，于是启动处理函数onChangeItem($event)
+ -->

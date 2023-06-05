@@ -18,9 +18,13 @@ export class ChildComponent {
   // 子传父
   // 1.声明一个事件对象，来接收父组件传递的事件(a.使用@Output装饰器定义一个变量接收;b.实例化EventEmitter类的函数)
   @Output() setValue = new EventEmitter();
-  
+
+  // 也可以使用别名
+  // @Output("setValue") mySetValue = new EventEmitter();
+
   // 2.向父组件发送参数
   sentValue(event:any){
     this.setValue.emit(event.target.value);// c.向父组件发送使用该对象.emit(...arg[])
+    // 注意，此处只能有一个参数，如果想要传多个参，只能用[]/{}来进行传递
   }
 }

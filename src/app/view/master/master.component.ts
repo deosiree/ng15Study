@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./master.component.scss']
 })
 export class MasterComponent {
-
+  master=""
 }

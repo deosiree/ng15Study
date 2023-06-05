@@ -1,1 +1,4 @@
-<p>master works!</p>
+<mark>主组件:{{master}}</mark>
+<P><input type="text" [(ngModel)]="master"></P>
+<hr>
+<app-children [(master2child)]="master"></app-children>
