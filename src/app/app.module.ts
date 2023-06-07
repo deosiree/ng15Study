@@ -16,6 +16,14 @@ import { PlanComponent } from './todolist/plan/plan.component';
 import { DoneComponent } from './todolist/done/done.component';
 import { HeaderComponent } from './todolist/header/header.component';
 import { IndexComponent } from './todolist/index/index.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -37,8 +45,12 @@ import { IndexComponent } from './todolist/index/index.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
