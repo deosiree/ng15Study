@@ -22,6 +22,7 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DemoComponent } from './zorro/demo/demo.component';
 
 registerLocaleData(en);
 
@@ -40,6 +41,7 @@ registerLocaleData(en);
     DoneComponent,
     HeaderComponent,
     IndexComponent,
+    DemoComponent,
   ],
   imports: [
     BrowserModule,

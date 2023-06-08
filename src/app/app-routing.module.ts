@@ -1,21 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DemoComponent } from './zorro/demo/demo.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    children: [
-      // {
-      //   path: 'list',
-      //   loadChildren: () => import('./components/list/list.module').then(m => m.ListModule),
-      // },
-      // {
-      //   path: 'detail',
-      //   loadChildren: () => import('./components/detail/detail.module').then(m => m.DetailModule),
-      // },
-    ],
-  },
+  { path: '', redirectTo: 'demo', pathMatch: 'full' },
+  { path: 'demo', component: DemoComponent },
+  // 其他路由配置
 ];
+
 
 
 @NgModule({
