@@ -7,10 +7,11 @@ import { Component, Input, OnChanges, OnDestroy, SimpleChanges } from '@angular/
 })
 export class ChildComponent implements OnChanges, OnDestroy {
   ngOnDestroy(): void {
-    console.log("我被销毁了，清除定时器或全局变量的");
+    console.log("我被销毁了，应用场景：清除定时器或全局变量的");
   }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes['index'].currentValue
+    // console.log(changes['index']); // 观察一下
+    console.log(changes['index'].currentValue  // 只能用`[]`,不能用`.`
     );
     // previousValue
   }
