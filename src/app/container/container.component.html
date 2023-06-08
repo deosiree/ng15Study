@@ -1,0 +1,10 @@
+<p>container works!</p>
+<!-- ng-container 不会渲染成任何的标签 -->
+<ul>
+  <ng-container *ngFor="let item of list; last as isLast">
+    <li>名称：{{ item.name }}</li>
+    <li>颜色：{{ item.color }}</li>
+    <li>价格：{{ item.price }}</li>
+    <li *ngIf="!isLast">**************************</li>
+  </ng-container>
+</ul>
