@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyComponentComponent } from './my-component/my-component.component';
 import { MyPipePipe } from './my-pipe.pipe';
+import { MyDirectiveDirective } from './my-directive.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyComponentComponent,
-    MyPipePipe
+    MyPipePipe,
+    MyDirectiveDirective
   ],
   imports: [
     BrowserModule,
